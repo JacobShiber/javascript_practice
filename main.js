@@ -171,12 +171,12 @@ function ifYoureBroke() {
 
 const clientName = document.getElementById("clientName");
 const amount1 = document.getElementById("amount");
-const submit = document.getElementById("submitButton");
+const withdrawButton = document.getElementById("withdrawBtn");
 const balanceButton = document.getElementById("balanceBtn");
+const depositButton = document.getElementById("depositBtn")
 
 
-
-submit.addEventListener("click", function() {
+withdrawButton.addEventListener("click", function() {
     for (let i = 0; i < bankClients.length; i++) {
         if (clientName.value == bankClients[i].fullName) {
             if(bankClients[i].balance - amount1.value > 0){
@@ -198,3 +198,33 @@ balanceButton.addEventListener("click", function() {
     };
 });
 
+
+depositButton.addEventListener("click", function () {
+    for (let i = 0; i < bankClients.length; i++){
+        if (clientName.value == bankClients[i].fullName){
+            bankClients[i].balance = Number(bankClients[i].balance) + Number(amount1.value);
+        };
+    };
+});
+
+
+const registerButton = document.getElementById("registerSubmit");
+const registerName = document.getElementById("registerName");
+const registerEmail = document.getElementById("registerEmail");
+const registerPhoneNum = document.getElementById("registerNum");
+const registerId = document.getElementById("idNum");
+const motherList = document.getElementById("motherList");
+
+registerButton.addEventListener("click", function () {
+    let newClient = {name : registerName.value, 
+                     email : registerEmail.value,
+                     phoneNum : registerPhoneNum.value,
+                     balance : 0,
+                     id : registerId}
+
+        bankClients.push(newClient);
+        let li = document.createElement("li");
+        motherList.appendChild(li);
+        li.innerHTML = registerName.value;
+        console.log(bankClients);
+});

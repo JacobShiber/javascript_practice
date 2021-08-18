@@ -1,0 +1,71 @@
+body {
+    background: rgb(255, 217, 0, 0.7);
+}
+#methodsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#clientMethods {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(rgb(0, 0, 0, 0.7),rgb(255, 217, 0, 0.5));
+}
+
+#clientMethods h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#clientMethods input {
+    width: 50%;
+    margin: auto;
+}
+
+#clientMethods ul li {
+    list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.buttonContainer {
+    width: 50%;
+    margin: auto;
+}
+
+.buttons {
+    width :100%;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#register {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(rgb(0, 0, 0, 0.7),rgb(255, 217, 0, 0.5));
+    margin-top: 40px;
+}
+
+#registerContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#register h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#register input {
+    width: 50%;
+    margin: auto;
+}

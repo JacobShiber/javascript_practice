@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Bank</title>
 </head>
 <body>
     <header></header>
     <main>
-        <label>Name:</label><br>
-        <input type="text" id="clientName"><br>
-        <label>Amount:</label><br>
-        <input type="number" id="amount"><br><br>
-        <button id="submitButton">Withdraw</button>
-        <button id="balanceBtn">Check my balance</button><br><br>
-        <ul>
+        <section id="methodsContainer">  
+        <div id="clientMethods">
+            <h1>Bank Methods</h1>
+        <label>Name:</label>
+        <input type="text" id="clientName">
+        <label>Amount:</label>
+        <input type="number" id="amount">
+        <div class="buttonContainer">
+        <button class="buttons" id="withdrawBtn">Withdraw</button>
+        <button class="buttons" id="depositBtn">Deposit</button>
+        <button class="buttons" id="balanceBtn">Check my balance</button>
+        </div>
+        <ul id="motherList">
             <li><i>Clients :</i></li>
             <li>Jeff</li>
             <li>Elon</li>
@@ -26,6 +33,26 @@
             <li>Johnny</li>
             <li>Marco</li>
         </ul>
+        </div>
+
+       
+    </section>
+    <section id="registerContainer">
+            <div id="register">
+            <h1>Join our bank</h1>
+            <label>Name</label>
+            <input type="text" id="registerName" required>
+            <label>Email</label>
+            <input type="email" id="registerEmail" required>
+            <label>Phone Number</label>
+            <input type="number" id="registerNum" required>
+            <label>ID</label>
+            <input type="number" id="idNum" required>
+            <div class="buttonContainer">
+            <button class="buttons" id="registerSubmit">Submit</button>
+            </div>
+        </div>
+    </section>    
     </main>
     <footer></footer>
 
